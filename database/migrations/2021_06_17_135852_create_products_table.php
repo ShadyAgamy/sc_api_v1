@@ -29,7 +29,7 @@ class CreateProductsTable extends Migration
             $table->text('shipping')->nullable();
             $table->float('shipment_usa');
             $table->float('shipment_int');
-            $table->integer('image_style')->comment('0 = Expanded 1 = Rounded 2 =  Flat');
+            $table->string('image_style')->nullable();
             $table->integer('product_type')->comment('0 = Physical Goods 1 = Digital Goods');
             $table->integer('visits')->default(0);
             $table->string('last_visit')->nullable();
