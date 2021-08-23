@@ -23,6 +23,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route::get('/register', function (Request $request) {
+//     return response()->json(['hello' => 'hello'], 201);
+// });
+
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/forgot/pw', [ForgotPasswordController::class, 'forgotPassword']);
