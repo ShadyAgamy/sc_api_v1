@@ -30,7 +30,7 @@ class CreateProductsTable extends Migration
             $table->float('shipment_usa');
             $table->float('shipment_int');
             $table->string('image_style')->nullable();
-            $table->integer('product_type')->comment('0 = Physical Goods 1 = Digital Goods');
+            $table->string('product_type')->nullable();
             $table->integer('visits')->default(0);
             $table->string('last_visit')->nullable();
             $table->timestamps();
