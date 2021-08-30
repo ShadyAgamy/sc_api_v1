@@ -27,6 +27,7 @@ class ForgotPasswordController extends Controller
             return response()->json(['msg' => 'E-mail not found in the database.'], 200);
         }
     }
+    
     public function changePassword()
     {
         request()->validate([

@@ -88,15 +88,19 @@ class ProductController extends Controller
 
         return response()->json(['msg' => 'Product Created!'], 200);
     }
+
+
     public function show($id)
     { 
         $responseCode = 200;
         $product =  Product::where('id', $id)->first();
-        if (empty($products)) {
+        if (empty($product)) {
             $responseCode = 404;
         }
         return response()->json(['data' => $product], $responseCode);
     }
+
+
     public function update($id)
     {
         $product =  Product::where('id', $id)->first();
