@@ -154,6 +154,8 @@ class ProductController extends Controller
 
         return response()->json(['msg' => 'Product Updated!'], 200);
     }
+
+    
     public function delete($id)
     {
         $product =  Product::where('id', $id)->first();
