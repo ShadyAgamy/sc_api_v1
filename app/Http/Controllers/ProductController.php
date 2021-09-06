@@ -101,10 +101,10 @@ class ProductController extends Controller
     }
 
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $product =  Product::where('id', $id)->first();
-        $product->update(request()->all());
+        $product->update($request->all());
 
         if (request()->hasFile('image1')) {
             $img = request()->file('image1');
